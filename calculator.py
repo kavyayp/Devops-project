@@ -16,7 +16,7 @@ def divide(a, b):
 def main():
     print("=== Automated Calculator Run ===")
 
-    a, b = 10, 5
+    a, b = 9, 5
     print(f"{a} + {b} = {add(a, b)}")
     print(f"{a} - {b} = {subtract(a, b)}")
     print(f"{a} * {b} = {multiply(a, b)}")
@@ -27,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
