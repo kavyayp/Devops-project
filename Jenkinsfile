@@ -10,14 +10,14 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t calculator-app .'
+                bat 'docker build -t calculator-app .'
             }
         }
 
         stage('Run Calculator in Docker') {
             steps {
                 echo 'Running calculator inside Docker...'
-                sh 'docker run --rm calculator-app'
+                bat 'docker run --rm calculator-app'
             }
         }
     }
