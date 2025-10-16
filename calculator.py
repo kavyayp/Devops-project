@@ -12,33 +12,18 @@ def divide(a, b):
         return "Error: Division by zero"
     return a / b
 
+
 def main():
-    print("=== Simple Calculator ===")
-    print("Operations: add, sub, mul, div")
-    
-    while True:
-        op = input("\nEnter operation (add/sub/mul/div or quit): ").lower()
-        if op == 'quit':
-            print("Exiting calculator.")
-            break
+    print("=== Automated Calculator Run ===")
 
-        try:
-            a = float(input("Enter first number: "))
-            b = float(input("Enter second number: "))
-        except ValueError:
-            print("Please enter valid numbers.")
-            continue
+    a, b = 10, 5
+    print(f"{a} + {b} = {add(a, b)}")
+    print(f"{a} - {b} = {subtract(a, b)}")
+    print(f"{a} * {b} = {multiply(a, b)}")
+    print(f"{a} / {b} = {divide(a, b)}")
 
-        if op == 'add':
-            print(f"Result: {add(a, b)}")
-        elif op == 'sub':
-            print(f"Result: {subtract(a, b)}")
-        elif op == 'mul':
-            print(f"Result: {multiply(a, b)}")
-        elif op == 'div':
-            print(f"Result: {divide(a, b)}")
-        else:
-            print("Invalid operation.")
+    print("\nAll operations executed successfully!")
+
 
 if __name__ == "__main__":
     main()
